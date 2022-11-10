@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body>
+        <div class="global-container">
+            <h1 id="settings-button">⚙</h1>
+            <div class="menu-bar">
+                <div id="score">
+                    <h1 class="score-text"></h1>
+                    <p>SCORE</p>
+                </div>
+                <div id="reset">
+                    <button id="reset-button"><h1 id="emoji">😄</h1></button>
+                </div>
+                <div class="timer">
+                    <h1 class="timer-text"></h1>
+                    <p>TIMER</p>
+                </div>
+            </div>
+            <div id="parent-grid">
+                <table class="land-grid"></table>
+                <table class="land-curtain"></table>
+            </div>
+            <div id="change-defaults" class="hide-block-css">
+                <form>
+                    <label for="mines">Mines:</label>
+                    <input type="number" id="mines-count-input" />
+                    <br />
+                    <center>
+                        <input type="checkbox" id="auto-miner-input" /><label
+                            for="auto-miner"
+                            >Auto-Miner</label
+                        >
+                    </center>
+                    <p>(Auto removes adjacent blocks if no threat)</p>
+                    <br />
+                    <a id="change-defaults-submit">Change</a>
+                </form>
+            </div>
+            <div id="win-popup" class="hide-block-css">
+                <center>
+                    <div id="cookie">
+                        <h1>🥳 YOU WON 🎉</h1>
+                        <h2>This is a Fortune cookie<br />Tap to break!</h2>
+                        <img src="./resources/images/cookie.png" alt="" />
+                    </div>
+                    <h3 id="cookie-quote" class="hide-block-css"></h3>
+                </center>
+            </div>
+        </div>
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>
